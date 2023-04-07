@@ -1,6 +1,10 @@
-# ext-name
+# Node Modules Clean
 
-<a href="https://marketplace.visualstudio.com/items?itemName=antfu.ext-name" target="__blank"><img src="https://img.shields.io/visual-studio-marketplace/v/antfu.ext-name.svg?color=eee&amp;label=VS%20Code%20Marketplace&logo=visual-studio-code" alt="Visual Studio Marketplace Version" /></a>
+Don't you find it troublesome to manually delete node_modules in VS Code
+
+Then use my plugin
+
+
 
 
 ## License
