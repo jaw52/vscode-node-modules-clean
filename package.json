@@ -2,7 +2,7 @@
   "publisher": "jaw52",
   "name": "node-modules-clean",
   "displayName": "node-modules-clean",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": true,
   "packageManager": "pnpm@8.1.1",
   "description": "Quickly remove node_modules For vscode",
@@ -20,7 +20,6 @@
     "Other"
   ],
   "main": "./dist/index.js",
-  "icon": "res/icon.png",
   "files": [
     "dist"
   ],
