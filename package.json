@@ -2,7 +2,7 @@
   "publisher": "Jaw",
   "name": "node-modules-clean",
   "displayName": "Node Modules Clean",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "packageManager": "pnpm@8.1.1",
   "description": "Quickly delete all node_modules with one click",
