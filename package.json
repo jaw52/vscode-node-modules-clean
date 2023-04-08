@@ -1,6 +1,6 @@
 {
   "publisher": "Jaw",
-  "name": "vscode-node-modules-clean",
+  "name": "node-modules-clean",
   "displayName": "Node Modules Clean",
   "version": "0.1.0",
   "private": true,
@@ -20,6 +20,7 @@
     "Other"
   ],
   "main": "./dist/index.js",
+  "icon": "res/icon.png",
   "files": [
     "dist"
   ],
