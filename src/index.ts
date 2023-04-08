@@ -1,7 +1,9 @@
 import path from 'node:path'
-import type { ExtensionContext } from 'vscode'
+import type { ExtensionContext, StatusBarItem } from 'vscode'
 import { StatusBarAlignment, commands, window, workspace } from 'vscode'
 import rimraf from 'rimraf'
+
+const DEFAULT_TEXT = 'Clean Node_modules'
 
 async function getRunItem() {
   const folders = workspace.workspaceFolders
@@ -25,24 +27,30 @@ async function getRunItem() {
   }
 }
 
-async function cleanNodeModules() {
+async function cleanNodeModules(bar: StatusBarItem) {
+  bar.text = `$(sync~spin)${DEFAULT_TEXT}`
+
   try {
     const select = await getRunItem()
-    const targetPath = path.join(select.path, 'node_modules')
-    await rimraf(targetPath, { glob: true })
-    window.showInformationMessage('Clean node_modules Ok')
+    const target = path.join(select.path, '**/node_modules').replace(/\\/g, '/')
+    await rimraf(target, { glob: true })
   }
   catch (error) {
     window.showErrorMessage('Clean node_modules ERROR.Please clean it manually.')
   }
+  finally {
+    bar.text = DEFAULT_TEXT
+  }
 }
 
 export function activate(context: ExtensionContext) {
-  const disposable = commands.registerCommand('extension.cleanNodeModules', cleanNodeModules)
-  context.subscriptions.push(disposable)
   const bar = window.createStatusBarItem(StatusBarAlignment.Left, 0)
-  bar.text = '$(trashcan) clean node_modules'
+
+  const disposable = commands.registerCommand('extension.cleanNodeModules', () => cleanNodeModules(bar))
+  context.subscriptions.push(disposable)
+  bar.text = DEFAULT_TEXT
   bar.command = 'extension.cleanNodeModules'
+  bar.tooltip = 'Clear node_modules in the workspace'
   bar.show()
 }
 
