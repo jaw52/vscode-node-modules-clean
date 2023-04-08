@@ -1,20 +1,20 @@
 {
   "publisher": "Jaw",
-  "name": "node-modules-clean",
+  "name": "vscode-node-modules-clean",
   "displayName": "Node Modules Clean",
   "version": "0.0.5",
   "private": true,
   "packageManager": "pnpm@8.1.1",
-  "description": "A faster way to delete node_modules than manual",
+  "description": "Quickly delete all node_modules with one click",
   "author": "jaw52",
   "license": "MIT",
-  "homepage": "https://github.com/jaw52/node-modules-clean#readme",
+  "homepage": "https://github.com/jaw52/vscode-node-modules-clean#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jaw52/node-modules-clean"
+    "url": "https://github.com/jaw52/vscode-node-modules-clean"
   },
   "bugs": {
-    "url": "https://github.com/jaw52/node-modules-clean/issues"
+    "url": "https://github.com/jaw52/vscode-node-modules-clean/issues"
   },
   "categories": [
     "Other"
