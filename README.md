@@ -2,6 +2,7 @@
 <center>
   <img src="./res/icon.png" height="200px"/>
 </center>
+
 Don't you find it troublesome to manually delete node_modules in VS Code
 
 Then use my plugin

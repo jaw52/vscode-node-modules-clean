@@ -28,7 +28,7 @@ async function getRunItem() {
 }
 
 async function cleanNodeModules(bar: StatusBarItem) {
-  bar.text = `$(sync~spin)${DEFAULT_TEXT}`
+  bar.text = `$(sync~spin) ${DEFAULT_TEXT}`
 
   try {
     const select = await getRunItem()
@@ -48,6 +48,7 @@ export function activate(context: ExtensionContext) {
 
   const disposable = commands.registerCommand('extension.cleanNodeModules', () => cleanNodeModules(bar))
   context.subscriptions.push(disposable)
+
   bar.text = DEFAULT_TEXT
   bar.command = 'extension.cleanNodeModules'
   bar.tooltip = 'Clear node_modules in the workspace'

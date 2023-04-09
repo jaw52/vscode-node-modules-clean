@@ -30,6 +30,14 @@
   "activationEvents": [
     "onStartupFinished"
   ],
+  "contributes": {
+    "commands": [
+      {
+        "title": "Clean All Node_modules",
+        "command": "extension.cleanNodeModules"
+      }
+    ]
+  },
   "scripts": {
     "build": "tsup src/index.ts --external vscode",
     "dev": "nr build --watch",
@@ -40,10 +48,6 @@
     "test": "vitest",
     "typecheck": "tsc --noEmit",
     "release": "bumpp && nr publish"
-  },
-  "dependencies": {
-    "fast-glob": "^3.2.12",
-    "slash": "^5.0.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.38.4",
