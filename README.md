@@ -1,7 +1,8 @@
 # Node Modules Clean
-<center>
+
+<<p align="center">
   <img src="./res/icon.png" height="200px"/>
-</center>
+</p>
 
 Don't you find it troublesome to manually delete node_modules in VS Code
 
@@ -13,9 +14,9 @@ Then use my plugin
    
 3. 👍 No complicated settings or configurations required - just install and use
 
-<center>
-  <img src="./res/readme.png" />
-</center>
+<p align="center">
+  <img src="./res/about.png" />
+</p>
 
 ## License
 
