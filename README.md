@@ -1,5 +1,7 @@
 # Node Modules Clean
 
+<a href="https://marketplace.visualstudio.com/items?itemName=Jaw.node-modules-clean" target="__blank"><img src="https://img.shields.io/visual-studio-marketplace/v/Jaw.node-modules-clean.svg?label=VS%20Code%20Marketplace&logo=visual-studio-code" alt="Visual Studio Marketplace Version" /></a>
+
 <<p align="center">
   <img src="./res/icon.png" height="200px"/>
 </p>
