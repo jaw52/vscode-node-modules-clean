@@ -51,7 +51,7 @@ export function activate(context: ExtensionContext) {
 
   bar.text = DEFAULT_TEXT
   bar.command = 'extension.cleanNodeModules'
-  bar.tooltip = 'Clear node_modules in the workspace'
+  bar.tooltip = 'Delete node_modules in the workspace'
   bar.show()
 }
 
