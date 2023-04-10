@@ -2,7 +2,7 @@
   "publisher": "Jaw",
   "name": "node-modules-clean",
   "displayName": "Clean Node Modules",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "private": true,
   "packageManager": "pnpm@8.1.1",
   "description": "Quickly delete all node_modules with one click",
@@ -25,7 +25,7 @@
     "dist"
   ],
   "engines": {
-    "vscode": "^1.77.0"
+    "vscode": "^1.63.0"
   },
   "activationEvents": [
     "onStartupFinished"
@@ -52,7 +52,7 @@
     "@antfu/eslint-config": "^0.38.4",
     "@antfu/ni": "^0.21.2",
     "@types/node": "^18.15.11",
-    "@types/vscode": "^1.77.0",
+    "@types/vscode": "^1.63.0",
     "bumpp": "^9.1.0",
     "eslint": "^8.37.0",
     "esno": "^0.16.3",
