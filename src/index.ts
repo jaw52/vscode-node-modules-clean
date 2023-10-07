@@ -5,6 +5,7 @@ import rimraf from 'rimraf'
 import { formatMs, getRunItem } from './utils'
 
 const DEFAULT_TEXT = 'Clean Node_modules'
+const COMMAND = 'extension.cleanNodeModules'
 
 async function cleanNodeModules(bar: StatusBarItem) {
   const select = await getRunItem()
@@ -28,11 +29,17 @@ async function cleanNodeModules(bar: StatusBarItem) {
 export function activate(context: ExtensionContext) {
   const bar = window.createStatusBarItem(StatusBarAlignment.Left, 0)
 
-  const disposable = commands.registerCommand('extension.cleanNodeModules', () => cleanNodeModules(bar))
+  const disposable = commands.registerCommand(COMMAND, async () => {
+    const select = await window.showQuickPick(['YES', 'NO'], { placeHolder: 'Do you want to delete all node_modules in the workspace?' })
+
+    if (select === 'YES')
+      await cleanNodeModules(bar)
+  })
+
   context.subscriptions.push(disposable)
 
   bar.text = DEFAULT_TEXT
-  bar.command = 'extension.cleanNodeModules'
+  bar.command = COMMAND
   bar.tooltip = 'Delete node_modules in the workspace'
   bar.show()
 }
